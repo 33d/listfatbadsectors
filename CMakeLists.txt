@@ -1,23 +1,12 @@
 cmake_minimum_required(VERSION 2.8)
-project(fatcat)
+project(listfatbadsectors)
 
 set(SOURCES
     core/FatEntry.cpp
     core/FatFilename.cpp
-    core/FatModule.cpp
     core/FatPath.cpp
     core/FatSystem.cpp
     core/FatDate.cpp
-
-    table/FatBackup.cpp
-    table/FatDiff.cpp
-
-    analysis/FatExtract.cpp
-    analysis/FatFix.cpp
-    analysis/FatChain.cpp
-    analysis/FatChains.cpp
-    analysis/FatSearch.cpp
-    analysis/FatWalk.cpp
     )
 
 foreach(SOURCE ${SOURCES})
@@ -26,5 +15,5 @@ endforeach()
 
 include_directories("${CMAKE_SOURCE_DIR}/src")
 
-add_executable(fatcat "src/fatcat.cpp" ${ALL_SOURCES})
-install(TARGETS fatcat DESTINATION bin)
+add_executable(listfatbadsectors "src/listfatbadsectors.cpp" ${ALL_SOURCES})
+install(TARGETS listfatbadsectors DESTINATION bin)
